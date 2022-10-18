@@ -1,14 +1,17 @@
 const express = require('express')
+const os = require('os')
 
 const app = express()
 
 app.get('/', (req, res) => {
-    res.send("working as restart")
+    console.log(os.hostname())
+    res.json({ success: true, hostname: os.hostname(), env: process.env.API_KEY })
 })
 
 app.get('/api', (req, res) => {
-    res.send("working as restart", process.env.API_KEY)
+    res.send("working as restart",)
 })
 
+const PORT = process.env.APPID
 
-app.listen(3000)
+app.listen(PORT, () => console.log("Server on port", PORT))
