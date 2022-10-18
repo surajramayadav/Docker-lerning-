@@ -1,0 +1,12 @@
+services:
+  api:
+    build:
+      context: ./node-hello-app
+      dockerfile: Dockerfile
+    image: node-api:1.0.0
+    ports:
+      - "2000:3000"
+    volumes:
+      - ./node-hello-app:/app
+    environment:
+      - API_KEY=jgdjgsjgdsjgduttt
