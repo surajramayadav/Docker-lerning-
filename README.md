@@ -1,5 +1,5 @@
-Docker Image (create image like windows image)
-1) for image build command with name
+Docker Image (create image like windows image)\n
+1) for image build command with name \n
 ---- docker image build -t hello .
 
 2) show all images
